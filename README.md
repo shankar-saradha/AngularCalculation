@@ -32,8 +32,9 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+
+### app.component.html
 ```
-app.component.html
 <style>
     *{
         box-sizing:border-box;
@@ -111,7 +112,7 @@ app.component.html
 </body>
 ```
 
-~~~app.module.html~~~
+###app.module
 ```
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -134,10 +135,55 @@ import { rectanglecomponent } from './rectangle.component';
 })
 export class AppModule { }
 ```
+##Pyramid component 
+```
 
-## OUTPUT:
+import { Component } from "@angular/core";
 
-### Home Page:
+@Component({
+    selector:'pyramid-Volume',
+    templateUrl:'pyramid.component.html'
+})
+export class pyramidcomponent{
+    height:number;
+    breath:number;
+    width:number;
+    volume:number;
+    constructor(){
+        this.height = 0
+        this.breath = 0
+        this.width = 0
+
+        this.volume = this.height*this.breath*this.width;
+    }
+
+    oncalculatevolume(){
+        
+        this.volume = this.height*this.breath*this.width;
+    }
+}
+```
+### rectangle component 
+```
+<div>
+    <br/>
+    Height : <input type="text" [(ngModel)]="height1"> Meters<br/>
+    <br/>
+    <br/>
+    Breath : <input type="text" [(ngModel)]="breath1"> Meters<br/>
+    <br/><br/>
+    Width : <input type="text" [(ngModel)]="width1"> Meters<br/>
+    <br/>
+    <input type = "button" (click)="oncalculatevolume()" value="Calculate volume"><br/>
+    <br/>
+    Area : <input type="text" readonly value="0" [value]="volume1"> Meter<sup>3</sup>
+    <br/>
+    
+</div>
+```
+
 
 
 ## Result:
+Caluculator created using Angular 
+
