@@ -186,5 +186,6 @@ export class pyramidcomponent{
 
 ## Result:
 Caluculator created using Angular 
-![calculator](https://user-images.githubusercontent.com/93978702/154948293-7405c073-84ef-4189-a430-8a296baabf47.png)
+
+![calculator (2)](https://user-images.githubusercontent.com/93978702/154948420-070c62b7-0e24-4c7f-9ca5-ce70096d482d.png)
 
